@@ -1,0 +1,15 @@
+﻿<Window x:Class="App.WindowHost.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App.WindowHost"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+            <Button Height="20" Name="StartBtn" Click="StartBtn_OnClick">Start</Button>
+            <Button Height="20" Name="StopBtn" Click="StopBtn_OnClick">Stop</Button>
+        </StackPanel>
+    </Grid>
+</Window>
