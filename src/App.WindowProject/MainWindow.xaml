@@ -1,0 +1,46 @@
+﻿<Window x:Class="App.WindowProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App.WindowProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label>Get info: </Label>
+                <TextBox Width="150"></TextBox>
+                <Button Margin="5, 0" Name="GetInfoBtn" Click="GetInfoBtn_OnClick">Get info</Button>
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Stretch" Name="GetInfoTextBlock" VerticalAlignment="Stretch"></TextBlock>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <Label>Text to show:</Label>
+            <TextBox Name="MessageTextBox"></TextBox>
+            <Button Name="MakeCallBtn" Click="MakeCallBtn_OnClick"> Make a call</Button>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Label>State: </Label>
+                <TextBox Width="125"></TextBox>
+                <Button Margin="5,0" Name="GetZipCodesBtn" Click="GetZipCodesBtn_OnClick">Get zip codes</Button>
+            </StackPanel>
+        </StackPanel>
+        
+        <TextBlock Name="GetZipsTextBLock" Grid.Column="1" Grid.Row="1"></TextBlock>
+        
+    </Grid>
+</Window>

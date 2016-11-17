@@ -14,11 +14,11 @@
 
         public void Configure()
         {
-            string address = "net.tcp://localhost:8009/GeoService";
-            var binding = new NetTcpBinding();
-            var contract = typeof(IGeoService);
+            //string address = "net.tcp://localhost:8009/GeoService";
+            //var binding = new NetTcpBinding();
+            //var contract = typeof(IGeoService);
 
-            _host.AddServiceEndpoint(contract, binding, address);
+            //_host.AddServiceEndpoint(contract, binding, address);
         }
     }
 }

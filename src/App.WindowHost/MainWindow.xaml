@@ -10,6 +10,7 @@
         <StackPanel>
             <Button Height="20" Name="StartBtn" Click="StartBtn_OnClick">Start</Button>
             <Button Height="20" Name="StopBtn" Click="StopBtn_OnClick">Stop</Button>
+            <TextBlock Name="MessageTextBlock"></TextBlock>
         </StackPanel>
     </Grid>
 </Window>

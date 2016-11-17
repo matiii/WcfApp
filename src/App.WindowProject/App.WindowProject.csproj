@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{24FC1790-2ED1-439B-9593-261F135E60EF}</ProjectGuid>
+    <ProjectGuid>{9672178A-DF01-45BB-BD7D-B6C0B641649B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>App.WindowHost</RootNamespace>
-    <AssemblyName>App.WindowHost</AssemblyName>
+    <RootNamespace>App.WindowProject</RootNamespace>
+    <AssemblyName>App.WindowProject</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -52,26 +52,24 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="AppBootstrap.xaml">
+    <ApplicationDefinition Include="AppBootstrap.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
+    </ApplicationDefinition>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="AppBootstrap.xaml.cs">
       <DependentUpon>AppBootstrap.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Bootstrap.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Private\IMessageService.cs" />
-    <Compile Include="Private\MessageManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -100,16 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\App.Contracts\App.Contracts.csproj">
-      <Project>{D9E87CFA-EE7F-4EAC-9C4B-A35675674FA1}</Project>
+      <Project>{d9e87cfa-ee7f-4eac-9c4b-a35675674fa1}</Project>
       <Name>App.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\App.Data\App.Data.csproj">
-      <Project>{80b06b12-a44b-44e1-a43c-fc8afe68e315}</Project>
-      <Name>App.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\App.Services\App.Services.csproj">
-      <Project>{72BAC769-1E19-4142-9B5F-4165637EC783}</Project>
-      <Name>App.Services</Name>
+    <ProjectReference Include="..\App.Proxies\App.Proxies.csproj">
+      <Project>{371b1ba8-1e5c-49ae-a347-fb1eefa6c38f}</Project>
+      <Name>App.Proxies</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
